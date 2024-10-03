@@ -1,0 +1,123 @@
+@use './partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+//header
+header{
+    background-color: $bandsite-black;
+    display: flex;
+    flex-direction: column;
+    color: $mercury;
+    .header__title-container {
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+        font-size: 40px;
+        line-height: 32px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 24px;
+        color: $mercury;
+        
+        .header__nav--left {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            padding-bottom: 16px;
+        }
+        .header__nav--left:hover{
+            border-bottom: 4px $white solid;
+            color: $white;  
+        }
+        .header__nav--left:active{
+            border-bottom: 4px $white solid;
+            color: $white;
+            font-weight: 600;
+        }
+        .header__nav--right {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            padding-bottom: 16px;
+        }
+        .header__nav--right:hover {
+            border-bottom: 4px $white solid;
+            color: $white;
+        }
+        .header__nav--right:active {
+            border-bottom: 4px $white solid;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+}
+
+//The Bees Knees Section
+.section__hero-container {
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    margin-bottom: 8px;
+
+    .section__hero-img--overlay {
+        background-color: $bandsite-black;
+        opacity: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+.section__hero-title {
+    display: flex;
+    color: $white;
+    font-size: 24px;
+    justify-content: center;
+    align-content: center;
+}
+
+//About the musicians section (Main Top Half)
+.main__container-top{
+    display: flex;
+    flex-direction: column;
+    color: $bandsite-black;
+
+    .main__img-container {
+        margin: 16px;
+    }
+    .main__container-top--text{
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
+        font-size: 40px;
+    }
+    .main__container-top--quote {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        margin: 16px;
+        letter-spacing: 2px;
+        line-height: 150%;
+        font-size: 20px;
+    }
+}
+
+//Main bottom half - About the musicians description section 
+.main__container-bottom{
+    
+    margin: 16px;
+    .main__container-bottom-text {
+        font-size: 24px;
+        display: flex;
+    }
+    .main__container-bottom--descr {
+        margin-top: 16px;
+        color: $bandsite-black;
+    }
+}

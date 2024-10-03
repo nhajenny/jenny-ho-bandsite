@@ -8,25 +8,38 @@ $alabaster: #FAFAFA;
 
 // font 
 @font-face {
-    font-family: avenir-next;
-    src: url(assets/font/AvenirNextLTPro-Regular.otf);
+    font-family: avenirNext;
+    src: url("../assets/font/AvenirNextLTPro-Regular.otf") format('opentype');
+    src: url("../assets/font/AvenirNextLTPro.ttf") format('truetype');
     font-weight: 400;
 }
 @font-face {
-    font-family: avenir-next;
-    src: url(assets/font/AvenirNextLTPro-Demi.otf);
+    font-family: avenirNext;
+    src: url("../assets/font/AvenirNextLTPro-Demi.otf") format('opentype');
+    src: url("../assets/font/AvenirNextLTProDemi.ttf") format('truetype');
     font-weight: 600;
 }
 @font-face {
-    font-family: avenir-next;
-    src: url(assets/font/AvenirNextLTPro-Bold.otf);
+    font-family: avenirNext;
+    src: url("../assets/font/AvenirNextLTPro-Bold.otf") format('opentype');
+    src: url("../assets/font/AvenirNextLTProBold.ttf") format('truetype');
     font-weight: 700;
 }
 
 //Mobile text styles
 h1 {
-    font-family: avenir-next;
+    font-family: avenirNext;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
+}
+h2 {
+    font-family: avenirNext;
+    font-weight: 600;
+}
+h3 {
+    font-family: avenirNext;
+    font-weight: 400;
+}
+body {
+    font-family: avenirNext;
+    font-weight: 400;
 }
