@@ -10,12 +10,17 @@ header{
     display: flex;
     flex-direction: column;
     color: $mercury;
+
     .header__title-container {
         display: flex;
         justify-content: center;
         padding: 16px;
         font-size: 40px;
         line-height: 32px;
+    }
+    .header__title-link {
+        text-decoration: none;
+        color: $white;
     }
     nav {
         display: flex;
@@ -29,6 +34,7 @@ header{
             width: 50%;
             justify-content: center;
             padding-bottom: 16px;
+            padding-top: 8px;
         }
         .header__nav--left:hover{
             border-bottom: 4px $white solid;
@@ -44,6 +50,7 @@ header{
             width: 50%;
             justify-content: center;
             padding-bottom: 16px;
+            padding-top: 8px;
         }
         .header__nav--right:hover {
             border-bottom: 4px $white solid;
@@ -62,9 +69,10 @@ header{
     background-image: url(../assets/images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
-    height: 300px;
+    height: 280px;
     position: relative;
     margin-bottom: 8px;
+    display: flex;
 
     .section__hero-img--overlay {
         background-color: $bandsite-black;
@@ -77,9 +85,12 @@ header{
 .section__hero-title {
     display: flex;
     color: $white;
-    font-size: 24px;
-    justify-content: center;
+    font-size: 34px;
+    justify-content: flex-start;
     align-content: center;
+    position: relative;
+    align-self: center;
+    margin: 16px;
 }
 
 //About the musicians section (Main Top Half)
@@ -95,7 +106,7 @@ header{
         padding-top: 16px;
         padding-right: 16px;
         padding-left: 16px;
-        font-size: 40px;
+        font-size: 30px;
     }
     .main__container-top--quote {
         display: flex;
@@ -104,13 +115,13 @@ header{
         margin: 16px;
         letter-spacing: 2px;
         line-height: 150%;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
 //Main bottom half - About the musicians description section 
 .main__container-bottom{
-    
+    padding-bottom: 16px;
     margin: 16px;
     .main__container-bottom-text {
         font-size: 24px;
@@ -119,5 +130,106 @@ header{
     .main__container-bottom--descr {
         margin-top: 16px;
         color: $bandsite-black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
     }
+}
+
+//Photo gallery 
+.section__photo-gallery-container {
+    background-color: $alabaster;
+}
+    .section__photo-gallery--text{
+        margin: 16px;
+        padding-top: 24px;
+    }
+    .section__photos-container {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        justify-content: space-evenly;
+
+        .section__photos-spacing{
+            padding-bottom: 16px;
+        }
+        .section__photos-spacing:hover {
+            filter: grayscale(100%);
+        }
+    }
+
+//Footer section
+footer {
+    background-color: $bandsite-black;
+    color: $white;
+}
+.footer__top-container {
+    margin-right: 16px;
+    margin-left: 16px;
+
+    .footer__top-container-title{
+        font-size: 34px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+    .footer__top-container--logo {
+        display: flex;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 50%;
+        justify-content: space-between;
+       
+    }
+}
+.footer__mid-container--1 {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    row-gap: 16px;
+
+    .footer__mid-container-title {
+        font-weight:600;
+    }
+    .footer__mid-container--text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.footer__mid-container--2{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    row-gap: 16px;
+
+    .footer__mid-container-title {
+        font-weight:600;
+    }
+    .footer__mid-container--text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.footer__mid-container--3{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    row-gap: 16px;
+
+    .footer__mid-container-title {
+        font-weight:600;
+    }
+    .footer__mid-container--text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.footer__bottom-text--title {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 16px;
+    padding-top: 16px;
+}
+.footer__bottom-text--trademark {
+    padding-right: 16px;
+    padding-left: 16px;
 }
