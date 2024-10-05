@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+//mixins
+//container for addresses 
+@mixin footer-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    row-gap: 1.5rem;
+    .footer__mid-container-title {
+        font-weight:600;
+    }
+    .footer__mid-container--text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+//media queries
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint){
+        @content;
+    }
+}

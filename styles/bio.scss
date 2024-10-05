@@ -1,4 +1,5 @@
 @use './partials/variables' as *;
+@use './partials/mixins' as *;
 
 * {
     margin: 0;
@@ -10,13 +11,27 @@ header{
     display: flex;
     flex-direction: column;
     color: $mercury;
+    box-sizing: border-box;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        
+    }
 
     .header__title-container {
         display: flex;
         justify-content: center;
-        padding: 16px;
-        font-size: 40px;
-        line-height: 32px;
+        padding: 1.5rem;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+        
     }
     .header__title-link {
         text-decoration: none;
@@ -26,15 +41,32 @@ header{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        font-size: 24px;
+        font-size: 1.5rem;
         color: $mercury;
+        box-sizing: border-box;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            column-gap: 3rem;
+        }
         
         .header__nav--left {
             display: flex;
             width: 50%;
             justify-content: center;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             padding-top: 8px;
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 4px $white solid;
+
+            @include tablet {
+                height: 5rem;
+                align-items: center;
+                border-bottom: 4px $white solid;
+            }
+
         }
         .header__nav--left:hover{
             border-bottom: 4px $white solid;
@@ -49,12 +81,19 @@ header{
             display: flex;
             width: 50%;
             justify-content: center;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             padding-top: 8px;
+
+            @include tablet {
+                display: flex;
+                height: 5rem;
+                align-items: center;
+            }
         }
         .header__nav--right:hover {
             border-bottom: 4px $white solid;
             color: $white;
+           
         }
         .header__nav--right:active {
             border-bottom: 4px $white solid;
@@ -69,10 +108,14 @@ header{
     background-image: url(../assets/images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
-    height: 280px;
+    height: 17.5rem;
     position: relative;
     margin-bottom: 8px;
     display: flex;
+
+    @include tablet {
+        height: 28rem;
+    }
 
     .section__hero-img--overlay {
         background-color: $bandsite-black;
@@ -85,12 +128,17 @@ header{
 .section__hero-title {
     display: flex;
     color: $white;
-    font-size: 34px;
+    font-size: 2rem;
     justify-content: flex-start;
     align-content: center;
     position: relative;
     align-self: center;
-    margin: 16px;
+    margin: 1rem;
+
+    @include tablet {
+        font-size: 3.75rem;
+        margin: 2.25rem;
+    }
 }
 
 //About the musicians section (Main Top Half)
@@ -100,58 +148,135 @@ header{
     color: $bandsite-black;
 
     .main__img-container {
-        margin: 16px;
+        margin: 1rem;
+        @include tablet {
+            padding: 1rem;
+            height: 31.25rem;
+            width: 80%;
+            margin: auto;
+        }
     }
     .main__container-top--text{
-        padding-top: 16px;
-        padding-right: 16px;
-        padding-left: 16px;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
         font-size: 30px;
+
+        @include tablet {
+            font-size: 54px;
+            margin-left: 2.25rem;
+            padding-right: 2.25rem;
+            padding-top: 2rem;
+        }
     }
     .main__container-top--quote {
         display: flex;
         flex-direction: column;
         font-weight: 600;
-        margin: 16px;
+        margin: 1rem;
         letter-spacing: 2px;
         line-height: 150%;
-        font-size: 16px;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size: 1.8rem;
+            margin: auto;
+            box-sizing: border-box;
+            display: flex;
+            width: 80%;
+            
+        }
+    }
+    .main__quote--bottom {
+        @include tablet {
+            font-size: 1.5rem;
+            display: flex;
+        }
     }
 }
 
+
 //Main bottom half - About the musicians description section 
 .main__container-bottom{
-    padding-bottom: 16px;
-    margin: 16px;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        align-items: flex-start;
+}
+
     .main__container-bottom-text {
-        font-size: 24px;
+        font-size: 1.5rem;
         display: flex;
+        @include tablet {
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 1rem;
+            width: 80%;
+            margin: auto;
+         
+        }
     }
     .main__container-bottom--descr {
-        margin-top: 16px;
+        margin-top: 1rem;
         color: $bandsite-black;
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 1rem;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            column-gap: 1rem;
+            font-size: 1.5rem;
+            padding: 1rem;
+            width: 80%;
+            line-height: 180%;
+            margin: auto;
+    
+        }
+        }
     }
-}
+
 
 //Photo gallery 
 .section__photo-gallery-container {
     background-color: $alabaster;
+
 }
     .section__photo-gallery--text{
-        margin: 16px;
-        padding-top: 24px;
+        margin: 1rem;
+        padding-top: 2rem;
+        @include tablet {
+            font-size: 45px;
+            width: 90%;
+            margin: auto;
+        }
+
     }
     .section__photos-container {
         display: flex;
         flex-direction: column;
-        padding: 16px;
+        padding: 1rem;
         justify-content: space-evenly;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            
+        }
 
         .section__photos-spacing{
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
+            @include tablet {
+                display: flex;
+                width: 30%;
+                padding: 0.5rem;
+            }
+
         }
         .section__photos-spacing:hover {
             filter: grayscale(100%);
@@ -162,74 +287,94 @@ header{
 footer {
     background-color: $bandsite-black;
     color: $white;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .footer__top-container {
-    margin-right: 16px;
-    margin-left: 16px;
+    display: flex;
 
-    .footer__top-container-title{
-        font-size: 34px;
-        padding-top: 16px;
-        padding-bottom: 8px;
+.footer__top--right {
+    display: none;
+    @include tablet {
+        display: flex;
+        padding: 1rem;
+        font-size: 1.5rem;
+        align-items: center;
+        width: 40%;
+        justify-content: flex-end ;
     }
-    .footer__top-container--logo {
+}
+
+.footer__top-container--left {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    @include tablet {
+        display: flex;
+        padding-top: 1rem;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .footer__top--title{
+        font-size: 2.25rem;
+        padding-top: 1rem;
+        padding-bottom: 8px;
+        @include tablet {
+            padding: 1rem;
+            font-size: 2.75rem;
+            display: flex;
+        }
+    }
+    .footer__top--logo {
         display: flex;
         padding-top: 8px;
         padding-bottom: 8px;
-        width: 50%;
+        justify-content: flex-start;
+        column-gap: 2rem;
+        @include tablet {
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+    }
+}
+}
+.footer__mid-container {
+    @include tablet {
+        display: flex;
         justify-content: space-between;
-       
+        width: 95%;
+        margin: auto;
     }
 }
 .footer__mid-container--1 {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    row-gap: 16px;
-
-    .footer__mid-container-title {
-        font-weight:600;
-    }
-    .footer__mid-container--text {
-        display: flex;
-        flex-direction: column;
-    }
+  @include footer-card;
 }
 .footer__mid-container--2{
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    row-gap: 16px;
-
-    .footer__mid-container-title {
-        font-weight:600;
-    }
-    .footer__mid-container--text {
-        display: flex;
-        flex-direction: column;
-    }
+    @include footer-card;
 }
 .footer__mid-container--3{
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    row-gap: 16px;
-
-    .footer__mid-container-title {
-        font-weight:600;
-    }
-    .footer__mid-container--text {
-        display: flex;
-        flex-direction: column;
-    }
+    @include footer-card;
 }
 .footer__bottom-text--title {
-    font-size: 30px;
-    line-height: 30px;
-    margin: 16px;
-    padding-top: 16px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 1rem;
+    padding-top: 1rem;
+
+    @include tablet {
+        display: none;
+    }
 }
 .footer__bottom-text--trademark {
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    @include tablet {
+        padding: 2rem;
+        width: 90%;
+
+    }
 }
