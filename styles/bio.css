@@ -34,6 +34,7 @@ h3 {
 body {
   font-family: avenirNext;
   font-weight: 400;
+  text-decoration: none;
 }
 
 * {
@@ -192,13 +193,15 @@ header nav .header__nav--right:active {
 @media screen and (min-width: 768px) {
   .section__hero-title {
     font-size: 3.75rem;
-    margin: 2.25rem;
+    width: 90%;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1280px) {
   .section__hero-title {
     padding: 1rem;
-    margin: 5rem;
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -369,10 +372,11 @@ header nav .header__nav--right:active {
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    padding-bottom: 3rem;
   }
 }
 .section__photos-container .section__photos-spacing {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .section__photos-container .section__photos-spacing {
@@ -417,8 +421,14 @@ footer {
     padding: 1rem;
     font-size: 1.5rem;
     width: 30%;
-    height: 20px;
+    height: 1.25rem;
     justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top-container .footer__top--right {
+    width: 45%;
+    height: 1.25rem;
   }
 }
 .footer__top-container .footer__top-container--left {
@@ -432,6 +442,11 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     margin-left: 1.55rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top-container .footer__top-container--left {
+    margin-left: 4rem;
   }
 }
 .footer__top-container .footer__top-container--left .footer__top--title {
@@ -468,6 +483,14 @@ footer {
     justify-content: space-between;
     width: 90%;
     margin: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__mid-container {
+    display: flex;
+    justify-content: flex-start;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 }
 
@@ -518,6 +541,8 @@ footer {
   line-height: 1.8rem;
   margin: 1rem;
   padding-top: 1rem;
+  width: 7.25rem;
+  height: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .footer__bottom-text--title {
@@ -526,13 +551,12 @@ footer {
 }
 
 .footer__bottom-text--trademark {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__bottom-text--trademark {
     padding: 2rem;
-    width: 87%;
+    width: 88.5%;
     margin: auto;
   }
 }/*# sourceMappingURL=bio.css.map */
