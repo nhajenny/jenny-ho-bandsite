@@ -1,6 +1,10 @@
 @use './variables' as *;
 
 //mixins
+@mixin box($width, $height:$width){
+    width: $width;
+    height: $height;
+}
 //container for addresses 
 @mixin footer-card{
     display: flex;
@@ -15,8 +19,19 @@
         flex-direction: column;
     }
 }
-
-
+//flexbox mixins 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-just-center {
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-alig-center {
+    display: flex;
+    align-items: center;
+}
 //media queries
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint){
