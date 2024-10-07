@@ -89,7 +89,6 @@ header .header__title-link {
 }
 header nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   font-size: 1.5rem;
   color: #E1E1E1;
@@ -165,7 +164,7 @@ header nav .header__nav--right:active {
   background-size: cover;
   height: 17.5rem;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
 }
 @media screen and (min-width: 768px) {
@@ -183,9 +182,9 @@ header nav .header__nav--right:active {
 
 .section__hero-title {
   display: flex;
+  justify-content: flex-start;
   color: #FFFFFF;
   font-size: 2rem;
-  justify-content: flex-start;
   position: relative;
   align-self: center;
   margin: 1rem;
@@ -216,8 +215,8 @@ header nav .header__nav--right:active {
 @media screen and (min-width: 768px) {
   .main__container-top .main__img-container {
     padding: 1rem;
-    height: 31.25rem;
     width: 80%;
+    height: 31.25rem;
     margin: auto;
   }
 }
@@ -405,8 +404,6 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .footer__top-container {
-    -moz-column-gap: 3.65rem;
-         column-gap: 3.65rem;
     display: flex;
     align-items: center;
   }
@@ -420,15 +417,9 @@ footer {
     align-items: center;
     padding: 1rem;
     font-size: 1.5rem;
-    width: 30%;
+    width: 20%;
     height: 1.25rem;
     justify-content: flex-end;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__top-container .footer__top--right {
-    width: 45%;
-    height: 1.25rem;
   }
 }
 .footer__top-container .footer__top-container--left {
@@ -439,14 +430,15 @@ footer {
   .footer__top-container .footer__top-container--left {
     display: flex;
     padding: 1rem;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 1.55rem;
+    width: 68%;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__top-container .footer__top-container--left {
-    margin-left: 4rem;
+    display: flex;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 }
 .footer__top-container .footer__top-container--left .footer__top--title {
@@ -463,6 +455,7 @@ footer {
 }
 .footer__top-container .footer__top-container--left .footer__top--logo {
   display: flex;
+  align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
   justify-content: flex-start;
@@ -473,7 +466,6 @@ footer {
   .footer__top-container .footer__top-container--left .footer__top--logo {
     padding: 1rem;
     display: flex;
-    justify-content: flex-start;
   }
 }
 

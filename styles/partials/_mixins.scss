@@ -33,6 +33,11 @@
     display: flex;
     align-items: center;
 }
+@mixin flex-just-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
 //media queries
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint){
