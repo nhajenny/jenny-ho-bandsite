@@ -10,25 +10,6 @@ $alabaster: #FAFAFA;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
-// font 
-@font-face {
-    font-family: avenirNext;
-    src: url("../assets/font/AvenirNextLTPro-Regular.otf") format('opentype');
-    src: url("../assets/font/AvenirNextLTPro.ttf") format('truetype');
-    font-weight: 400;
-}
-@font-face {
-    font-family: avenirNext;
-    src: url("../assets/font/AvenirNextLTPro-Demi.otf") format('opentype');
-    src: url("../assets/font/AvenirNextLTProDemi.ttf") format('truetype');
-    font-weight: 600;
-}
-@font-face {
-    font-family: avenirNext;
-    src: url("../assets/font/AvenirNextLTPro-Bold.otf") format('opentype');
-    src: url("../assets/font/AvenirNextLTProBold.ttf") format('truetype');
-    font-weight: 700;
-}
 
 //Mobile text styles
 h1 {
