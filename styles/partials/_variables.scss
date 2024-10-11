@@ -1,31 +1,14 @@
 //colors 
-$bandsite-black: #323232;
-$silver: #AFAFAF;
-$white: #FFFFFF;
-$bandsite-darkblack: #000000;
-$mercury: #E1E1E1;
-$alabaster: #FAFAFA;
+$primary-black: #323232;
+$primary-medium: #AFAFAF;
+$primary-light: #FFFFFF;
+$secondary-black: #000000;
+$secondary-medium: #E1E1E1;
+$secondary-light: #FAFAFA;
 
 //breakpoint
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 
-//Mobile text styles
-h1 {
-    font-family: avenirNext;
-    font-weight: 700;
-}
-h2 {
-    font-family: avenirNext;
-    font-weight: 600;
-}
-h3 {
-    font-family: avenirNext;
-    font-weight: 400;
-}
-body {
-    font-family: avenirNext;
-    font-weight: 400;
-    text-decoration: none;
-}
+

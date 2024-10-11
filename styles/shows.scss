@@ -1,0 +1,137 @@
+@use './partials/global' as *;
+@use './partials/mixins' as *;
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//hero section 
+.section__hero-container--shows {
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 17.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    display: flex;
+
+    @include tablet {
+        height: 28rem;
+    }
+    .section__hero-img--overlay--shows {
+        background-color: $primary-black;
+        opacity: 50%;
+        position: absolute;
+        @include box(100%,100%);
+    }
+}
+.section__hero_text--shows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    row-gap: 0.5rem;
+    @include tablet {
+        width: 90%;
+        margin: auto;
+    }
+    @include desktop {
+        width: 85%;
+        margin: auto;
+    }
+    .section__hero--subtitle {
+        @include flex-just-start;
+        color: $primary-light;
+        position: relative;
+        @include tablet {
+            font-size: 1.75rem;
+        }
+    }
+    .section__hero-title--shows {
+       @include flex-just-start;
+        color: $primary-light;
+        font-size: 2rem;
+        position: relative;
+    
+        @include tablet {
+            font-size: 3.75rem;
+        }
+    }
+}
+
+// NEED TO ADD IN SOUNDCLOUD PIECE 
+
+//Show listing section 
+.section__show_list {
+    display: flex;
+   
+}
+.section__showHeader {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.section__show-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    row-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom: 1px solid $primary-medium;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+    }
+}
+.section__show_date--title {
+    display: flex;
+    color: $primary-medium;
+    font-weight: 600;
+}
+.section__show_venue--title {
+    display: flex;
+    color: $primary-medium;
+    font-weight: 600;
+}
+.section__show_location--title {
+    display: flex;
+    color: $primary-medium;
+    font-weight: 600;
+}
+.section__show--date {
+    display: flex;
+    font-weight: 600;
+}
+.section__show--venue {
+    display: flex;
+    
+}
+.section__show--location {
+    display: flex;
+    
+}
+.section__show--button {
+    @include box (100%,40px);
+    background-color: $primary-black;
+    color: $primary-light;
+    border-radius: 4px;
+    font-weight: 600;
+    @include tablet {
+        @include box(150px, 40px);
+    }
+
+}
+.section__show--button:hover {
+    background-color: $secondary-black;
+}

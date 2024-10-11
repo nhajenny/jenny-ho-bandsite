@@ -13,8 +13,8 @@
         <a href="index.html" class="header__title-link">BANDSITE</a> 
     </div>
     <nav>
-        <a href="index.html" class="header__nav--left"> Biography</a>
-        <a class="header__nav--right">Shows</a> 
+        <a href="index.html" class="nav__left"> Biography</a>
+        <a href="pages/shows.html" class="nav__right">Shows</a> 
     </nav>
 </header>
 
@@ -60,6 +60,29 @@
     </div>
 </section>
 
+
+<section class="section__comment--container">
+    <h2 class="section__comment--heading"> Join the Conversation</h2>
+    <div class="comment__container--main">
+        <div class="comment__container--left">
+            <img src="assets/images/Mohan-muruge.jpg" alt="face" class="comment__avatar">
+        </div>
+        <div class="comment__container--right">
+            <form id="commentForm">
+                <h3 class="comment__form--title">Name</h3>
+                <input type="text" name="nameInput" placeholder="Enter your name" class="comment__text--name"/>
+                <h3 class="comment__form--title">Comment</h3>
+                <textarea name="commentInput" placeholder="Add a new comment" class="comment__textarea"></textarea>
+                <button type="submit" class="comment__button">COMMENT</button>
+            </form>
+            <!--dynamic content will be appended to the ul-->
+            <ul id="commentList"></ul>
+        </div>
+    </div>
+   <div class="section__comment_container--bottom">
+   </div>
+</section>
+
 <footer>
     <div class="footer__top-container">
         <div class="footer__top-container--left">
@@ -71,11 +94,7 @@
             </div>
         </div>
        <div class="footer__top--right"> BANDSITE</div>
-    </div>
-        
-       
-
-  
+    </div>       
 <section class="footer__mid-container">
     <div class="footer__mid-container--1"> 
         <h3 class="footer__mid-container-title"> The Bees Knees Management</h3>
@@ -85,7 +104,6 @@
         </div>
         <a href="mailto:info@thebeesknees.com" style="text-decoration:none;color:#fff">info@thebeesknees.com</a>
     </div>
-
     <div class="footer__mid-container--2">
         <h3 class="footer__mid-container-title">Limitless Artist Group </h3>
         <div class="footer__mid-container--text">
@@ -104,12 +122,12 @@
         <a href="mailto:bookings@archentertainment.com" style="text-decoration:none;color:#fff">bookings@archentertainment.com</a>
     </div>
 </section>
-
-    
     <div class="footer__bottom-text--title">BANDSITE</div>
     <div class="footer__bottom-text--trademark">Copyright The Bees Knees © 2023 All Rights Reserved </div>
-
 </footer>
+
+<!--Script import-->
+<script src="scripts/index-page.js"></script>
 
 </body>
 </html>
