@@ -277,17 +277,31 @@
     font-weight: 600;
     
 }
-.comment__text--name {
+.comment__text--name{
     @include box(90%, 0.5rem);
     border-radius: 4px;
     padding: 1rem;
-    
 }
+
 .comment__textarea {
     @include box(90%, 100px);
     border-radius: 4px;
     padding: 1rem;
+    
 }
+input, textarea {
+    border-color: $primary-medium;
+    background-color: $secondary-light;
+}
+input:focus, textarea:focus {
+    border-color: $primary-black;
+    outline: none;
+}
+.comment__input_state--error {
+    border: 2px solid #D22D2D;
+    outline: none;
+}
+
 .comment__button {
     font-weight: 600;
     color: $primary-light;
@@ -296,8 +310,8 @@
     margin-top: 0.25rem;
     margin-bottom: 1rem;
    @include box(95%,40px)
-
 }
+
 
 // comment section under form 
 
@@ -318,7 +332,6 @@
         width: 60%;
         margin: auto;
     }
-
 }
 .section__comment--left {
     display: flex;
@@ -328,15 +341,12 @@
         padding-top: 1rem;
     }
 }
- 
-.section__comment_profile--img {
-    display: flex;
-    @include box( 45px, 45px);
+ .section__comment--profile {
+    @include box(45px,45px);
+    background-color: $secondary-medium;
     clip-path: circle();
-    object-fit: cover;
-    filter: grayscale(100%);
-    background-color: $primary-medium;
-}
+ }
+
 .section__comment--right {
     display: flex;
     flex-direction: column;

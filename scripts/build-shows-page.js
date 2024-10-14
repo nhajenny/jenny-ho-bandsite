@@ -41,6 +41,32 @@ function renderShowList(shows) {
     showHeader.classList.add("section__showHeader");
     showHeader.innerText = "Shows";
     showContainer.appendChild(showHeader);
+
+//same fuction but need header row for tablet breakpoint
+
+    if (window.innerWidth >= 768) {  
+        let titleRow = document.createElement("div");
+        titleRow.classList.add("section__show-card--header");
+
+        let dateHeader = document.createElement("div");
+        dateHeader.classList.add("section__date--header");
+        dateHeader.innerText = "DATE";
+
+        let venueHeader = document.createElement("div");
+        venueHeader.classList.add("section__venue--header");
+        venueHeader.innerText = "VENUE";
+
+        let locationHeader = document.createElement("div");
+        locationHeader.classList.add("section__location--header");
+        locationHeader.innerText = "LOCATION";
+
+        titleRow.appendChild(dateHeader);
+        titleRow.appendChild(venueHeader);
+        titleRow.appendChild(locationHeader);
+
+        showContainer.appendChild(titleRow);
+    }
+
     for (let i=0; i<shows.length; i++) {
         let showCard = document.createElement("div");
         showCard.classList.add("section__show-card");
@@ -53,7 +79,6 @@ function renderShowList(shows) {
         showDateCard.classList.add("section__show_card--date");
         showVenueCard.classList.add("section__show_card--venue");
         showLocationCard.classList.add("section__show_card--location");
-        //append all to showcontainer? or card? 
         showCard.appendChild(showDateCard);
         showCard.appendChild(showVenueCard);
         showCard.appendChild(showLocationCard);
@@ -73,7 +98,6 @@ function renderShowList(shows) {
         showDateCard.appendChild(showDateTitle);
         showVenueCard.appendChild(showVenueTitle);
         showLocationCard.appendChild(showLocationTitle);
-        
 
         let showDate = document.createElement("div");
         showDate.classList.add("section__show--date");
@@ -100,5 +124,4 @@ function renderShowList(shows) {
 
 renderShowList(showArray);
 
-//
 

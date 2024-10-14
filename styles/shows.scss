@@ -13,13 +13,13 @@
     background-image: url(../assets/images/hero-shows.jpg);
     background-position: center;
     background-size: cover;
-    height: 17.5rem;
+    height: 25rem;
     position: relative;
     margin-bottom: 0.5rem;
     display: flex;
 
     @include tablet {
-        height: 28rem;
+        height: 35rem;
     }
     .section__hero-img--overlay--shows {
         background-color: $primary-black;
@@ -42,11 +42,18 @@
     @include desktop {
         width: 85%;
         margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .section__hero_text--left {
+        display: flex;
+        flex-direction: column; 
     }
     .section__hero--subtitle {
         @include flex-just-start;
         color: $primary-light;
         position: relative;
+        font-size: 1.25rem;
         @include tablet {
             font-size: 1.75rem;
         }
@@ -56,19 +63,30 @@
         color: $primary-light;
         font-size: 2rem;
         position: relative;
-    
         @include tablet {
             font-size: 3.75rem;
         }
     }
 }
+.section__hero-soundcloud--container {
+    display: flex;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    position: relative;
+}
+.section__hero-soundcloud {
+    @include box(25rem,12.5rem);
+    position: relative;
 
-// NEED TO ADD IN SOUNDCLOUD PIECE 
+    @include tablet {
+        @include box(35rem, 16.5rem);
+    }
+    
+}
 
 //Show listing section 
 .section__show_list {
     display: flex;
-   
 }
 .section__showHeader {
     margin-left: 1rem;
@@ -76,6 +94,14 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
+    @include tablet {
+        width: 90%;
+        margin: auto;
+    }
+    @include desktop {
+        width: 85%;
+        margin: auto;
+    }
 }
 .section__show-card {
     display: flex;
@@ -86,19 +112,41 @@
     margin-left: 1rem;
     margin-right: 1rem;
     border-bottom: 1px solid $primary-medium;
-
     @include tablet {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
         margin: auto;
+        @include tablet {
+            &:not(:first-child) {
+                .section__show_date--title,
+                .section__show_venue--title,
+                .section__show_location--title {
+                    display: none;
+             }
+        }
+    }
+    }
+    @include desktop {
+        width: 65%;
     }
 }
+.section__show-card:hover {
+    background-color: $secondary-light;
+}
+.section__show-card:active {
+    background-color: $secondary-medium;
+}
+
 .section__show_date--title {
     display: flex;
     color: $primary-medium;
     font-weight: 600;
 }
+
+
 .section__show_venue--title {
     display: flex;
     color: $primary-medium;
@@ -114,15 +162,13 @@
     font-weight: 600;
 }
 .section__show--venue {
-    display: flex;
-    
+    display: flex;  
 }
 .section__show--location {
-    display: flex;
-    
+    display: flex; 
 }
 .section__show--button {
-    @include box (100%,40px);
+    @include box(100%,40px);
     background-color: $primary-black;
     color: $primary-light;
     border-radius: 4px;
@@ -130,8 +176,32 @@
     @include tablet {
         @include box(150px, 40px);
     }
-
 }
 .section__show--button:hover {
     background-color: $secondary-black;
+}
+.section__show-card--header {
+    display: none;
+    @include tablet {
+        display: flex;
+        color: $primary-medium;
+        font-weight: 600;
+        margin-left: 2.5rem;
+        margin-right: 2rem;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 60%;
+        justify-content: space-between;
+    }
+    @include desktop {
+        display: flex;
+        color: $primary-medium;
+        font-weight: 600;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 65%;
+        justify-content: flex-start;
+        margin: auto;
+        column-gap: 12.2rem;
+    }
 }

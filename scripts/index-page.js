@@ -38,10 +38,7 @@ function renderComment(comments) {
         let profileContainer = document.createElement('div');
         profileContainer.classList.add("section__comment--profile");
         commentLeftSide.appendChild(profileContainer);
-        let profileImage = document.createElement('img');
-        profileImage.src = comments[i].profilePic;
-        profileImage.classList.add("section__comment_profile--img");
-        profileContainer.appendChild(profileImage);
+       
 
         let commentRightSide=document.createElement('div');
         commentRightSide.classList.add("section__comment--right");
@@ -52,7 +49,7 @@ function renderComment(comments) {
         let commentCardTop = document.createElement('div');
         commentCardTop.classList.add("section__comment_top");
         commentRightSide.appendChild(commentCardTop);
-        //allDefaultComments.appendChild(commentCardTop);
+       
 
         let commentName= document.createElement('div')
         commentName.classList.add("section__comment--name");
@@ -73,8 +70,6 @@ function renderComment(comments) {
 }
 renderComment(commentArray);
 
-
-
 //form dynamic
 const commentForm = document.getElementById('commentForm');
 //const commentList = document.getElementById('commentList');
@@ -82,23 +77,36 @@ const commentForm = document.getElementById('commentForm');
 commentForm.addEventListener('submit', function(event){
     event.preventDefault();
     
-    const nameInputValue = event.target.nameInput.value;
-    const commentInputValue = event.target.commentInput.value;
-    if (nameInputValue !== '' && commentInputValue !=='') {
+    const nameInput = event.target.nameInput; 
+    const commentInput = event.target.commentInput;
+    const nameInputValue = nameInput.value.trim(); 
+    const commentInputValue = commentInput.value.trim();
+    let formValid=true;
+    if (nameInputValue === '') {
+        nameInput.classList.add("comment__input_state--error");
+        formValid=false;
+    } else {nameInput.classList.remove('comment__input_state--error');
+    }
+    if (commentInputValue === '') {
+        commentInput.classList.add("comment__input_state--error");
+        formValid=false;
+    } else {commentInput.classList.remove('comment__input_state--error');
+    }
+
+    if (!formValid) {
+        alert("Please fill out information");
+        return;
+    } 
         commentArray.unshift({
             name: nameInputValue,
             date: new Date().toLocaleDateString(),
             comment: commentInputValue,
             profilePic: "../assets/images/Mohan-muruge.jpg",
-        })
+        }); 
         renderComment(commentArray);
         commentForm.reset();
-    } else {
-        alert("please enter a valid comment");
-    }
     });
 
 
-//still need to figure out how ot turn the form field red at error. 
-//NEED form field background to be grey 
+
 
