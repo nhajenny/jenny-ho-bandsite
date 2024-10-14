@@ -822,11 +822,11 @@ input:focus, textarea:focus {
 
 .section__comment--text {
   display: flex;
+  justify-content: flex-start;
   padding-right: 1rem;
   line-height: 180%;
   padding-bottom: 1rem;
   font-size: 1rem;
-  justify-content: flex-start;
 }
 @media (min-width: 768px) {
   .section__comment--text {

@@ -208,8 +208,7 @@
 
 // Commenting/forum section 
 .section__comment--container {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     padding-top: 1rem;
     padding-bottom: 2rem;
     .section__comment--heading {
@@ -241,8 +240,7 @@
 }
 
 .section__container--left {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     width: 5%;
     margin: auto;
 
@@ -257,8 +255,7 @@
 
 }
 .comment__container--right {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     @include box(100%);
     padding: 2rem;
     @include tablet {
@@ -322,8 +319,7 @@ input:focus, textarea:focus {
     padding-bottom: 1rem;
 }
 .section__comment_container--bottom {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     @include tablet {
         width: 85%;
         margin: auto;
@@ -348,16 +344,13 @@ input:focus, textarea:focus {
  }
 
 .section__comment--right {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     width: 95%;
     justify-content: flex-start;
 }
 
 .section__comment_top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-row-between;
     padding-bottom: 0.5rem;
     @include tablet {
         padding-top: 1rem;
@@ -383,13 +376,11 @@ input:focus, textarea:focus {
 }
 
 .section__comment--text{
-    display: flex;
-    
+    @include flex-just-start;
     padding-right: 1rem;
     line-height: 180%;
     padding-bottom: 1rem;
     font-size: 1rem;
-    justify-content: flex-start;
     @include tablet {
         font-size: 1.2rem;
     }

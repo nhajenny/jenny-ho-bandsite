@@ -45,6 +45,16 @@
     display: flex;
     justify-content: flex-start;
 }
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@mixin flex-col-jus-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 //media queries
 @mixin tablet {
