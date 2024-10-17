@@ -8,7 +8,6 @@
     padding: 0;
 }
 
-
 //The Bees Knees Section
 .section__hero-container {
     background-image: url(../assets/images/hero-bio.jpg);
@@ -22,7 +21,6 @@
     @include tablet {
         height: 28rem;
     }
-
     .section__hero-img--overlay {
         background-color: $primary-black;
         opacity: 50%;
@@ -49,8 +47,6 @@
          }
      }
 }
-
-
 //About the musicians section (Main Top Half)
 .main__container-top{
     @include flex-column;
@@ -159,7 +155,6 @@
         }
     }
 
-
 //Photo gallery 
 .section__photo-gallery-container {
     background-color: $secondary-light;
@@ -259,68 +254,52 @@
             width: 100%;
             margin: auto;
         }
+    }
+    #commentForm {
+        @include flex-column;
+        row-gap: 5px;
         
+    }
+    .comment__form--title {
+        color: $primary-medium;
+        font-weight: 600;
+        font-size: 1.25rem;
+        
+    }
+    .comment__text--name{
+        @include box(90%, 0.5rem);
+        border-radius: 4px;
+        padding: 1rem;
+    }
+    .comment__textarea {
+        @include box(90%, 100px);
+        border-radius: 4px;
+        padding: 1rem;   
+    }
+    input, textarea {
+        border-color: $primary-medium;
+        background-color: $secondary-light;
+    }
+    input:focus, textarea:focus {
+        border-color: $primary-black;
+        outline: none;
+    }
+    .comment__input_state--error {
+        border: 2px solid #D22D2D;
+        outline: none;
+    }
+    .comment__button {
+        font-weight: 600;
+        color: $primary-light;
+        background-color: $primary-black;
+        border-radius:4px;
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+       @include box(95%,40px)
     }
 }
 
-
-
-
-#commentForm {
-    @include flex-column;
-    row-gap: 5px;
-    
-}
-.comment__form--title {
-    color: $primary-medium;
-    font-weight: 600;
-    font-size: 1.25rem;
-    
-}
-.comment__text--name{
-    @include box(90%, 0.5rem);
-    border-radius: 4px;
-    padding: 1rem;
-}
-
-.comment__textarea {
-    @include box(90%, 100px);
-    border-radius: 4px;
-    padding: 1rem;
-    
-}
-input, textarea {
-    border-color: $primary-medium;
-    background-color: $secondary-light;
-}
-input:focus, textarea:focus {
-    border-color: $primary-black;
-    outline: none;
-}
-.comment__input_state--error {
-    border: 2px solid #D22D2D;
-    outline: none;
-}
-
-.comment__button {
-    font-weight: 600;
-    color: $primary-light;
-    background-color: $primary-black;
-    border-radius:4px;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-   @include box(95%,40px)
-}
-
-
 // comment section under form 
-
-.section__default_comment--container {
-    display: flex;
-    margin: 1rem;
-    border-bottom: 1px $primary-medium solid;
-    padding-bottom: 1rem;
-}
 .section__comment_container--bottom {
     @include flex-column;
     @include tablet {
@@ -331,60 +310,65 @@ input:focus, textarea:focus {
         width: 60%;
         margin: auto;
     }
-}
-.section__comment--left {
-    display: flex;
-    @include box(15%);
-    justify-content: center;
-    @include tablet {
-        padding-top: 1rem;
+    .section__default_comment--container {
+        display: flex;
+        margin: 1rem;
+        border-bottom: 1px $primary-medium solid;
+        padding-bottom: 1rem;
     }
-}
- .section__comment--profile {
-    @include box(45px,45px);
-    background-color: $secondary-medium;
-    clip-path: circle();
- }
-
-.section__comment--right {
-    @include flex-column;
-    width: 95%;
-    justify-content: flex-start;
-}
-
-.section__comment_top {
-    @include flex-row-between;
-    padding-bottom: 0.5rem;
-    @include tablet {
-        padding-top: 1rem;
+    .section__comment--left {
+        display: flex;
+        @include box(15%);
+        justify-content: center;
+        @include tablet {
+            padding-top: 1rem;
+        }
     }
-}
-.section__comment--date {
-    color: $primary-medium;
-    font-weight: 600;
-    padding-right: 1rem;
-    font-size: 1rem;
-    @include tablet {
-        font-size: 1.5rem;
+     .section__comment--profile {
+        @include box(45px,45px);
+        background-color: $secondary-medium;
+        clip-path: circle();
+     }
+    
+    .section__comment--right {
+        @include flex-column;
+        width: 95%;
+        justify-content: flex-start;
     }
-}
-.section__comment--name {
-    color: $primary-black;
-    font-weight: 600;
-    padding-right: 1rem;
-    font-size: 1rem;
-    @include tablet {
-        font-size: 1.5rem;
+    
+    .section__comment_top {
+        @include flex-row-between;
+        padding-bottom: 0.5rem;
+        @include tablet {
+            padding-top: 1rem;
+        }
     }
-}
-
-.section__comment--text{
-    @include flex-just-start;
-    padding-right: 1rem;
-    line-height: 180%;
-    padding-bottom: 1rem;
-    font-size: 1rem;
-    @include tablet {
-        font-size: 1.2rem;
+    .section__comment--date {
+        color: $primary-medium;
+        font-weight: 600;
+        padding-right: 1rem;
+        font-size: 1rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+    .section__comment--name {
+        color: $primary-black;
+        font-weight: 600;
+        padding-right: 1rem;
+        font-size: 1rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+    .section__comment--text{
+        @include flex-just-start;
+        padding-right: 1rem;
+        line-height: 180%;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 }

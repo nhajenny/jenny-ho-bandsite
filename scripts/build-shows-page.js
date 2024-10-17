@@ -1,5 +1,4 @@
 //show array 
-
 const showArray = [
     {
         date: "Mon Sept 09 2024",
@@ -32,7 +31,6 @@ const showArray = [
         location: "San Francisco, CA",
     },
 ]
-
 // function to pass array 
 function renderShowList(shows) {
     let showContainer = document.getElementById("section__show_list");
@@ -42,36 +40,28 @@ function renderShowList(shows) {
     showHeader.innerText = "Shows";
     showContainer.appendChild(showHeader);
 
-//same fuction but need header row for tablet breakpoint
-
-    if (window.innerWidth >= 768) {  
+//header row for name, venue, location
+    
         let titleRow = document.createElement("div");
         titleRow.classList.add("section__show-card--header");
-
         let dateHeader = document.createElement("div");
         dateHeader.classList.add("section__date--header");
         dateHeader.innerText = "DATE";
-
         let venueHeader = document.createElement("div");
         venueHeader.classList.add("section__venue--header");
         venueHeader.innerText = "VENUE";
-
         let locationHeader = document.createElement("div");
         locationHeader.classList.add("section__location--header");
         locationHeader.innerText = "LOCATION";
-
         titleRow.appendChild(dateHeader);
         titleRow.appendChild(venueHeader);
         titleRow.appendChild(locationHeader);
-
         showContainer.appendChild(titleRow);
-    }
-
+// start for loop to run through showArray
     for (let i=0; i<shows.length; i++) {
         let showCard = document.createElement("div");
         showCard.classList.add("section__show-card");
         showContainer.appendChild(showCard);
-
         //box for date/venue/location + content 
         let showDateCard = document.createElement("div");
         let showVenueCard = document.createElement("div");
@@ -82,7 +72,6 @@ function renderShowList(shows) {
         showCard.appendChild(showDateCard);
         showCard.appendChild(showVenueCard);
         showCard.appendChild(showLocationCard);
-
         //header title/naming (date/venue/location)
         let showDateTitle = document.createElement('div');
         let showVenueTitle = document.createElement('div');
@@ -118,10 +107,8 @@ function renderShowList(shows) {
         showButton.classList.add("section__show--button");
         showButton.innerText = "BUY TICKETS";
         showCard.appendChild(showButton);
-
     }
  }
-
 renderShowList(showArray);
 
 
