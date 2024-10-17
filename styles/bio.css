@@ -393,8 +393,7 @@ footer .footer__bottom-text--trademark {
   width: 100%;
   height: 100%;
 }
-
-.section__hero-title {
+.section__hero-container .section__hero-title {
   display: flex;
   justify-content: flex-start;
   color: #FFFFFF;
@@ -404,14 +403,14 @@ footer .footer__bottom-text--trademark {
   margin: 1rem;
 }
 @media (min-width: 768px) {
-  .section__hero-title {
+  .section__hero-container .section__hero-title {
     font-size: 3.75rem;
     width: 90%;
     margin: auto;
   }
 }
 @media (min-width: 1280px) {
-  .section__hero-title {
+  .section__hero-container .section__hero-title {
     padding: 1rem;
     width: 85%;
     margin: auto;
@@ -631,32 +630,29 @@ footer .footer__bottom-text--trademark {
     margin: auto;
   }
 }
-
-.comment__container--main {
+.section__comment--container .comment__container--main {
   display: flex;
   flex-direction: row;
 }
 @media (min-width: 768px) {
-  .comment__container--main {
+  .section__comment--container .comment__container--main {
     width: 85%;
     margin: auto;
   }
 }
 @media (min-width: 1280px) {
-  .comment__container--main {
+  .section__comment--container .comment__container--main {
     width: 60%;
     margin: auto;
   }
 }
-
-.section__container--left {
+.section__comment--container .section__container--left {
   display: flex;
   flex-direction: column;
   width: 5%;
   margin: auto;
 }
-
-.comment__avatar {
+.section__comment--container .comment__avatar {
   width: 45px;
   height: 45px;
   -webkit-clip-path: circle();
@@ -667,8 +663,7 @@ footer .footer__bottom-text--trademark {
      object-fit: cover;
   display: flex;
 }
-
-.comment__container--right {
+.section__comment--container .comment__container--right {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -676,7 +671,7 @@ footer .footer__bottom-text--trademark {
   padding: 2rem;
 }
 @media (min-width: 768px) {
-  .comment__container--right {
+  .section__comment--container .comment__container--right {
     width: 100%;
     margin: auto;
   }

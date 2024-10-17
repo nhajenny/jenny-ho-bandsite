@@ -29,26 +29,27 @@
         position: absolute;
         @include box(100%,100%);
     }
+    .section__hero-title {
+        @include flex-just-start;
+         color: $primary-light;
+         font-size: 2rem;
+         position: relative;
+         align-self: center;
+         margin: 1rem;
+     
+         @include tablet {
+             font-size: 3.75rem;
+             width: 90%;
+             margin: auto;
+         }
+         @include desktop {
+             padding: 1rem;
+             width: 85%;
+             margin: auto;
+         }
+     }
 }
-.section__hero-title {
-   @include flex-just-start;
-    color: $primary-light;
-    font-size: 2rem;
-    position: relative;
-    align-self: center;
-    margin: 1rem;
 
-    @include tablet {
-        font-size: 3.75rem;
-        width: 90%;
-        margin: auto;
-    }
-    @include desktop {
-        padding: 1rem;
-        width: 85%;
-        margin: auto;
-    }
-}
 
 //About the musicians section (Main Top Half)
 .main__container-top{
@@ -121,8 +122,7 @@
     @include flex-column;
     @include tablet {
         align-items: flex-start;
-}
-
+    }   
     .main__container-bottom-text {
         font-size: 1.5rem;
         display: flex;
@@ -224,46 +224,48 @@
             margin: auto;
         }
     }
-}
-.comment__container--main {
-    display: flex;
-    flex-direction: row;
-    @include tablet{
-        width: 85%;
-        margin: auto;
+    .comment__container--main {
+        display: flex;
+        flex-direction: row;
+        @include tablet{
+            width: 85%;
+            margin: auto;
+        }
+        @include desktop {
+            width: 60%;
+            margin: auto;
+            
+        }
     }
-    @include desktop {
-        width: 60%;
+    .section__container--left {
+        @include flex-column;
+        width: 5%;
         margin: auto;
+    
+    }
+    .comment__avatar {
+        @include box(45px, 45px);
+        clip-path: circle();
+        margin-left: 1.7rem;
+        margin-top: 2rem;
+        object-fit: cover;
+        display: flex;
+    }
+    .comment__container--right {
+        @include flex-column;
+        @include box(100%);
+        padding: 2rem;
+        @include tablet {
+            width: 100%;
+            margin: auto;
+        }
         
     }
 }
 
-.section__container--left {
-    @include flex-column;
-    width: 5%;
-    margin: auto;
 
-}
-.comment__avatar {
-    @include box(45px, 45px);
-    clip-path: circle();
-    margin-left: 1.7rem;
-    margin-top: 2rem;
-    object-fit: cover;
-    display: flex;
 
-}
-.comment__container--right {
-    @include flex-column;
-    @include box(100%);
-    padding: 2rem;
-    @include tablet {
-        width: 100%;
-        margin: auto;
-    }
-    
-}
+
 #commentForm {
     @include flex-column;
     row-gap: 5px;
