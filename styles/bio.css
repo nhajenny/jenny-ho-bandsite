@@ -691,6 +691,7 @@ footer .footer__bottom-text--trademark {
 .comment__form--title {
   color: #AFAFAF;
   font-weight: 600;
+  font-size: 1.25rem;
 }
 
 .comment__text--name {
