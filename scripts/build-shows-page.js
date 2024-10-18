@@ -77,6 +77,9 @@ shows.forEach ((show)=> {
     //for (let i=0; i<shows.length; i++) {
     let showCard = document.createElement("div");
     showCard.classList.add("section__show-card");
+    showCard.addEventListener("click", ()=> {
+        showCard.classList.toggle("clicked");
+    });
     showContainer.appendChild(showCard);
     //box for date/venue/location + content 
     let showDateCard = document.createElement("div");
@@ -128,5 +131,3 @@ shows.forEach ((show)=> {
 
 getRenderShowDates();
 
-
-//create click function 
