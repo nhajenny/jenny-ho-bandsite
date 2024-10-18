@@ -668,7 +668,7 @@ footer .footer__bottom-text--trademark {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .section__comment--container .comment__container--right {
@@ -754,7 +754,7 @@ footer .footer__bottom-text--trademark {
     padding-top: 1rem;
   }
 }
-.section__comment_container--bottom .section__comment--profile {
+.section__comment_container--bottom .section__comment--left .section__comment--profile {
   width: 45px;
   height: 45px;
   background-color: #E1E1E1;
@@ -767,38 +767,51 @@ footer .footer__bottom-text--trademark {
   width: 95%;
   justify-content: flex-start;
 }
-.section__comment_container--bottom .section__comment_top {
+.section__comment_container--bottom .section__comment--right .section__comment_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .section__comment_container--bottom .section__comment_top {
+  .section__comment_container--bottom .section__comment--right .section__comment_top {
     padding-top: 1rem;
   }
 }
-.section__comment_container--bottom .section__comment--date {
+.section__comment_container--bottom .section__comment--right .section__comment_top .section__comment--date {
   color: #AFAFAF;
   font-weight: 600;
   padding-right: 1rem;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
-  .section__comment_container--bottom .section__comment--date {
-    font-size: 1.5rem;
+  .section__comment_container--bottom .section__comment--right .section__comment_top .section__comment--date {
+    font-size: 1.25rem;
   }
 }
-.section__comment_container--bottom .section__comment--name {
+.section__comment_container--bottom .section__comment--right .section__comment_top .section__comment--name {
   color: #323232;
   font-weight: 600;
   padding-right: 1rem;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
-  .section__comment_container--bottom .section__comment--name {
+  .section__comment_container--bottom .section__comment--right .section__comment_top .section__comment--name {
     font-size: 1.5rem;
   }
+}
+.section__comment_container--bottom .section__comment--right .section__comment_card-bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+.section__comment_container--bottom .section__comment--right .section__comment_card-bottom .section__comment_right--like {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
 }
 .section__comment_container--bottom .section__comment--text {
   display: flex;

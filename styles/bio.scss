@@ -249,7 +249,7 @@
     .comment__container--right {
         @include flex-column;
         @include box(100%);
-        padding: 2rem;
+        padding: 1rem;
         @include tablet {
             width: 100%;
             margin: auto;
@@ -323,42 +323,51 @@
         @include tablet {
             padding-top: 1rem;
         }
+        .section__comment--profile {
+            @include box(45px,45px);
+            background-color: $secondary-medium;
+            clip-path: circle();
+         }
     }
-     .section__comment--profile {
-        @include box(45px,45px);
-        background-color: $secondary-medium;
-        clip-path: circle();
-     }
-    
     .section__comment--right {
         @include flex-column;
         width: 95%;
         justify-content: flex-start;
-    }
-    
-    .section__comment_top {
-        @include flex-row-between;
-        padding-bottom: 0.5rem;
-        @include tablet {
-            padding-top: 1rem;
+        .section__comment_top {
+            @include flex-row-between;
+            padding-bottom: 0.5rem;
+            @include tablet {
+                padding-top: 1rem;
+            }
+            .section__comment--date {
+                color: $primary-medium;
+                font-weight: 600;
+                padding-right: 1rem;
+                font-size: 1rem;
+                @include tablet {
+                    font-size: 1.25rem;
+                }
+            }
+            .section__comment--name {
+                color: $primary-black;
+                font-weight: 600;
+                padding-right: 1rem;
+                font-size: 1rem;
+                @include tablet {
+                    font-size: 1.5rem;
+                }
+            }
         }
-    }
-    .section__comment--date {
-        color: $primary-medium;
-        font-weight: 600;
-        padding-right: 1rem;
-        font-size: 1rem;
-        @include tablet {
-            font-size: 1.5rem;
-        }
-    }
-    .section__comment--name {
-        color: $primary-black;
-        font-weight: 600;
-        padding-right: 1rem;
-        font-size: 1rem;
-        @include tablet {
-            font-size: 1.5rem;
+        .section__comment_card-bottom {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            column-gap: 0.25rem;
+            .section__comment_right--like {
+                @include box(30px,30px);
+                display: flex;
+                align-items: flex-end;
+            }
         }
     }
     .section__comment--text{

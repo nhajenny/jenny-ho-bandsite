@@ -33,7 +33,7 @@ const showArray = [
 ]
 // function to pass array 
 function renderShowList(shows) {
-    let showContainer = document.getElementById("section__show_list");
+    let showContainer = document.querySelector(".section__show-list");
     showContainer.innerHTML=""; 
     let showHeader = document.createElement('h1');
     showHeader.classList.add("section__showHeader");
@@ -112,3 +112,4 @@ function renderShowList(shows) {
 renderShowList(showArray);
 
 
+//create click function 

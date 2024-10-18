@@ -461,10 +461,11 @@ footer .footer__bottom-text--trademark {
   }
 }
 
-.section__show_list {
+.section__show-list {
   display: flex;
+  flex-direction: column;
 }
-.section__show_list .section__showHeader {
+.section__show-list .section__showHeader {
   margin-left: 1rem;
   margin-right: 1rem;
   padding-left: 1rem;
@@ -472,18 +473,19 @@ footer .footer__bottom-text--trademark {
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .section__show_list .section__showHeader {
+  .section__show-list .section__showHeader {
     width: 90%;
     margin: auto;
   }
 }
 @media (min-width: 1280px) {
-  .section__show_list .section__showHeader {
+  .section__show-list .section__showHeader {
     width: 85%;
     margin: auto;
   }
 }
-.section__show_list .section__show-card {
+
+.section__show-card {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -494,7 +496,7 @@ footer .footer__bottom-text--trademark {
   border-bottom: 1px solid #AFAFAF;
 }
 @media (min-width: 768px) {
-  .section__show_list .section__show-card {
+  .section__show-card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -504,28 +506,31 @@ footer .footer__bottom-text--trademark {
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
-  .section__show_list .section__show-card:not(:first-child) .section__show_date--title,
-  .section__show_list .section__show-card:not(:first-child) .section__show_venue--title,
-  .section__show_list .section__show-card:not(:first-child) .section__show_location--title {
+  .section__show-card:not(:first-child) .section__show_date--title,
+  .section__show-card:not(:first-child) .section__show_venue--title,
+  .section__show-card:not(:first-child) .section__show_location--title {
     display: none;
   }
 }
 @media (min-width: 1280px) {
-  .section__show_list .section__show-card {
+  .section__show-card {
     width: 65%;
   }
 }
-.section__show_list .section__show-card:hover {
+
+.section__show-card:hover {
   background-color: #FAFAFA;
 }
-.section__show_list .section__show-card:active {
+
+.section__show-card:active {
   background-color: #E1E1E1;
 }
-.section__show_list .section__show-card--header {
+
+.section__show-card--header {
   display: none;
 }
 @media (min-width: 768px) {
-  .section__show_list .section__show-card--header {
+  .section__show-card--header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -539,7 +544,7 @@ footer .footer__bottom-text--trademark {
   }
 }
 @media (min-width: 1280px) {
-  .section__show_list .section__show-card--header {
+  .section__show-card--header {
     display: flex;
     color: #AFAFAF;
     font-weight: 600;
@@ -552,32 +557,39 @@ footer .footer__bottom-text--trademark {
          column-gap: 12.2rem;
   }
 }
-.section__show_list .section__show_date--title {
+
+.section__show_date--title {
   display: flex;
   color: #AFAFAF;
   font-weight: 600;
 }
-.section__show_list .section__show_venue--title {
+
+.section__show_venue--title {
   display: flex;
   color: #AFAFAF;
   font-weight: 600;
 }
-.section__show_list .section__show_location--title {
+
+.section__show_location--title {
   display: flex;
   color: #AFAFAF;
   font-weight: 600;
 }
-.section__show_list .section__show--date {
+
+.section__show--date {
   display: flex;
   font-weight: 600;
 }
-.section__show_list .section__show--venue {
+
+.section__show--venue {
   display: flex;
 }
-.section__show_list .section__show--location {
+
+.section__show--location {
   display: flex;
 }
-.section__show_list .section__show--button {
+
+.section__show--button {
   width: 100%;
   height: 40px;
   background-color: #323232;
@@ -586,11 +598,12 @@ footer .footer__bottom-text--trademark {
   font-weight: 600;
 }
 @media (min-width: 768px) {
-  .section__show_list .section__show--button {
+  .section__show--button {
     width: 150px;
     height: 40px;
   }
 }
-.section__show_list .section__show--button:hover {
+
+.section__show--button:hover {
   background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */
