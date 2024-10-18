@@ -30,15 +30,31 @@ class BandSiteApi {
                 console.error("Error posting comment", error);
             }
         }
+    //method to like comments
+    async likeComments() {
+        try {
+            const response = await axios.put(`${this.baseUrl}/comments/${commentId}like?api_key=${this.apiKey}`, {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+        });
+            return response.data;
+            //console.log(`Comment ${commentId} liked`);
+        } catch(error){
+            console.error("error liking comment", error);
+        }     
+    } 
     //method to delete comments
     async deleteComments(commentId) {
+        
         try {
-            const response = await axios.delete(`${this.baseUrl}/comments/:id?api_key=${this.apiKey}`, commentId, {
+            const response = await axios.delete(`${this.baseUrl}/comments/${commentId}?api_key=${this.apiKey}`, commentId, {
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
-            console.log(`Comment ${commentId} deleted`);
+            return response.data;
+            //console.log(`Comment ${commentId} deleted`);
         } catch(error) {
             console.error("error deleting comment", error);
         }

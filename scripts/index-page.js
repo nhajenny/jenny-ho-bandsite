@@ -84,9 +84,19 @@ function renderComment(comments) {
     let commentCardBottom=document.createElement('div');
     commentCardBottom.classList.add("section__comment_card-bottom")
     commentRightSide.appendChild(commentCardBottom);
+    //like button and functionality
     let commentLikeButton = document.createElement('img');
     commentLikeButton.src="assets/icons/SVG/icon-like.svg";
     commentLikeButton.classList.add("section__comment_right--like");
+    commentLikeButton.addEventListener("click", async()=> {
+        try {
+            const likedComment = await bandSiteApi.likeComments();
+            getRenderComments();
+            console.log(likedComment);
+        } catch (error) {
+            console.error("error liking comment:", error);
+        }
+    });
     commentCardBottom.appendChild(commentLikeButton);
 
     //delete button & functionality
@@ -97,6 +107,7 @@ function renderComment(comments) {
         try {
             const deletedComment = await bandSiteApi.deleteComments(comment.id);
             getRenderComments();
+            console.log(deletedComment);
         } catch (error) {
             console.error("error deleting comment:", error)
         }
