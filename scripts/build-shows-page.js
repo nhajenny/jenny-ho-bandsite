@@ -106,7 +106,7 @@ shows.forEach ((show)=> {
 
     let showDate = document.createElement("div");
     showDate.classList.add("section__show--date");
-    showDate.innerText= show.date;
+    showDate.innerText= new Date(show.date).toLocaleDateString('en-US',{weekday:'short',year:'numeric', month:'short',day:'numeric'});
     showDateCard.appendChild(showDate);
 
     let showVenue = document.createElement('div');
