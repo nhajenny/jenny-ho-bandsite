@@ -85,12 +85,16 @@ function renderComment(comments) {
     commentCardBottom.classList.add("section__comment_card-bottom")
     commentRightSide.appendChild(commentCardBottom);
     //like button and functionality
+    let commentLikeCounter=document.createElement('div');
+    commentLikeCounter.classList.add("section__comment_right--counter");
+    commentLikeCounter.innerText = comment.likes;
+    commentCardBottom.appendChild(commentLikeCounter);
     let commentLikeButton = document.createElement('img');
     commentLikeButton.src="assets/icons/SVG/icon-like.svg";
     commentLikeButton.classList.add("section__comment_right--like");
     commentLikeButton.addEventListener("click", async()=> {
         try {
-            const likedComment = await bandSiteApi.likeComments();
+            const likedComment = await bandSiteApi.likeComments(comment.id);
             getRenderComments();
             console.log(likedComment);
         } catch (error) {
@@ -98,6 +102,7 @@ function renderComment(comments) {
         }
     });
     commentCardBottom.appendChild(commentLikeButton);
+
 
     //delete button & functionality
     let commentDeleteButton = document.createElement('button');

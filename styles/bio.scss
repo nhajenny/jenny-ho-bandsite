@@ -368,6 +368,12 @@
                 display: flex;
                 align-items: flex-end;
             }
+            .section__comment_right--counter {
+                display: flex;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: $primary-medium;
+            }
         }
     }
     .section__comment--text{

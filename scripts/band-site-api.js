@@ -31,22 +31,21 @@ class BandSiteApi {
             }
         }
     //method to like comments
-    async likeComments() {
+    async likeComments(commentId) {
         try {
-            const response = await axios.put(`${this.baseUrl}/comments/${commentId}like?api_key=${this.apiKey}`, {
+            const response = await axios.put(`${this.baseUrl}/comments/${commentId}/like?api_key=${this.apiKey}`, {
                 headers: {
                     "Content-Type": "application/json"
                 }
         });
-            return response.data;
+            return response.data.likes;
             //console.log(`Comment ${commentId} liked`);
         } catch(error){
             console.error("error liking comment", error);
         }     
     } 
     //method to delete comments
-    async deleteComments(commentId) {
-        
+    async deleteComments(commentId) { 
         try {
             const response = await axios.delete(`${this.baseUrl}/comments/${commentId}?api_key=${this.apiKey}`, commentId, {
                 headers: {
@@ -57,6 +56,19 @@ class BandSiteApi {
             //console.log(`Comment ${commentId} deleted`);
         } catch(error) {
             console.error("error deleting comment", error);
+        }
+    }
+    //method to get showdates
+    async getShowDates() {
+        try {
+            const response = await axios.get(`${this.baseUrl}/showdates?api_key=${this.apiKey}`,{
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            return response.data;
+        } catch(error) {
+            console.error("error getting showdates",error);
         }
     }
     }

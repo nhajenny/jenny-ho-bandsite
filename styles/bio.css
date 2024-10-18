@@ -813,6 +813,12 @@ footer .footer__bottom-text--trademark {
   display: flex;
   align-items: flex-end;
 }
+.section__comment_container--bottom .section__comment--right .section__comment_card-bottom .section__comment_right--counter {
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #AFAFAF;
+}
 .section__comment_container--bottom .section__comment--text {
   display: flex;
   justify-content: flex-start;
